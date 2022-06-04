@@ -21,7 +21,7 @@ def get_area_code(somehash, key)
     if somehash.key?(key)
         "The area code for #{key} is #{somehash["#{key}"]}"
     else
-        "The city is absent"
+        "You entered a city name not in the dictionary"
     end
 
 end
@@ -36,5 +36,4 @@ loop do
     puts "Enter your selection"
     requested_city = gets.chomp.downcase
     puts get_area_code(dial_book, requested_city)
-    
 end
